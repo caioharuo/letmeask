@@ -4,7 +4,7 @@ Designed to simplify how viewers ask questions and how creators can view and ans
 
 <p>🚧 This application is under development 🚧</p>
 
-<h2>Layout</h2>
+<h2>Layout 🖼️</h2>
 <p>You can check the Layout right here: https://www.figma.com/file/u0BQK8rCf2KgzcukdRRCWh/Letmeask?node-id=0%3A1</p>
 
 <img src="https://i.imgur.com/qO41kYN.png" /> 
@@ -18,7 +18,7 @@ Designed to simplify how viewers ask questions and how creators can view and ans
   <img alt="Styled Components" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
 </div>
 
-## Installation
+## Installation 💻
 
 1. Clone this repo: `git clone https://github.com/caioharuo/letmeask.git`
 2. Install all the dependencies `yarn` or `npm install`
