@@ -27,4 +27,4 @@ Designed to simplify how viewers ask questions and how creators can view and ans
 
 </br>
 
-<p>Developed with 💜 on Next Level Week Together - Rocketseat</p>
+<p align="center">Developed with 💜 on Next Level Week Together - Rocketseat</p>
