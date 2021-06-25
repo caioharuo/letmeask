@@ -10,13 +10,13 @@ Designed to simplify how viewers ask questions and how creators can view and ans
 <h2>Tools 🛠️</h2>
 
 <div align="center">
-  <a href="https://pt-br.reactjs.org/" target="_blank">
+  <a href="https://pt-br.reactjs.org/">
     <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
   </a>
-  <a href="https://firebase.google.com/" target="_blank">
+  <a href="https://firebase.google.com/">
   <img alt="Firebase" src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase"/>
   </a>
-  <a href="https://www.typescriptlang.org/" target="_blank">
+  <a href="https://www.typescriptlang.org/">
   <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
   </a>
 </div>
