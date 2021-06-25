@@ -2,8 +2,6 @@
 <p> Letmeask is a Web Platform developed for content creators and viewers. </br>
 Designed to simplify how viewers ask questions and how creators can view and answer them in real time. </p>
 
-<p>🚧 This application is under development 🚧</p>
-
 <h2>Layout 🖼️</h2>
 <p>You can check the Layout right here: https://www.figma.com/file/u0BQK8rCf2KgzcukdRRCWh/Letmeask?node-id=0%3A1</p>
 
