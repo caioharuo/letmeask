@@ -1,4 +1,23 @@
 #page-room {
+  height: 100%;
+  min-height: 100vh;
+
+  &.dark {
+    background: #222845;
+
+    header {
+      border-color: #835afd;
+    }
+
+    .room-title h1 {
+      color: #f8f8f8;
+    }
+
+    .user-info span {
+      color: #f8f8f8 !important;
+    }
+  }
+
   header {
     padding: 24px;
     border-bottom: 1px solid #e2e2e2;
@@ -10,7 +29,7 @@
       justify-content: space-between;
       align-items: center;
 
-      > img {
+      a > img {
         max-height: 45px;
       }
 

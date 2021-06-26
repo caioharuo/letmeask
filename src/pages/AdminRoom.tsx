@@ -1,5 +1,4 @@
-// import { useAuth } from "../hooks/useAuth";
-import { useHistory, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 
 import toast, { Toaster } from "react-hot-toast";
 
@@ -7,9 +6,12 @@ import { Button } from "../components/Button";
 import { RoomCode } from "../components/RoomCode";
 import { Question } from "../components/Question";
 import { useRoom } from "../hooks/useRoom";
+import { useTheme } from "../hooks/useTheme";
 import { database } from "../services/firebase";
+import { ButtonToggleTheme } from "../components/ButtonToggleTheme";
 
 import logoImg from "../assets/images/logo.svg";
+import logoDarkImg from "../assets/images/logo-dark.svg";
 import deleteImg from "../assets/images/delete.svg";
 import checkImg from "../assets/images/check.svg";
 import answerImg from "../assets/images/answer.svg";
@@ -21,8 +23,9 @@ type RoomParams = {
 };
 
 export function AdminRoom() {
-  // const { user } = useAuth();
   const history = useHistory();
+  const { theme } = useTheme();
+
   const params = useParams<RoomParams>();
   const roomId = params.id;
 
@@ -56,12 +59,17 @@ export function AdminRoom() {
   }
 
   return (
-    <div id="page-room">
+    <div id="page-room" className={theme}>
       <Toaster />
 
       <header>
         <div className="content">
-          <img src={logoImg} alt="" />
+          <Link to="/">
+            <img
+              src={theme === "light" ? logoImg : logoDarkImg}
+              alt="Letmeask"
+            />
+          </Link>
           <div>
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>
@@ -69,6 +77,7 @@ export function AdminRoom() {
             </Button>
           </div>
         </div>
+        <ButtonToggleTheme />
       </header>
 
       <main>

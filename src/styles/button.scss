@@ -20,9 +20,13 @@
   }
 
   &.outlined {
-    background: #fff;
+    background: transparent;
     border: 1px solid #835afd;
     color: #835afd;
+
+    &.dark {
+      filter: brightness(0.9);
+    }
   }
 
   &:not(:disabled):hover {

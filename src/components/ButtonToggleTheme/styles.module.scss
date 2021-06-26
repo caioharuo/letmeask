@@ -1,0 +1,14 @@
+.button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  background: transparent;
+  border: 0;
+
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}

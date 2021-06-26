@@ -3,6 +3,36 @@
   align-items: stretch;
   height: 100vh;
 
+  &.dark {
+    background: #222845;
+
+    aside {
+      background: #1c0f44;
+    }
+
+    .separator {
+      color: #f8f8f8;
+      &::before {
+        background-color: #f8f8f8;
+      }
+
+      &::after {
+        background-color: #f8f8f8;
+      }
+    }
+
+    .main-content form input {
+      background-color: transparent;
+      border: 1px solid #f8f8f8;
+    }
+
+    .main-content h2,
+    .main-content p,
+    .main-content input {
+      color: #f8f8f8;
+    }
+  }
+
   aside {
     flex: 7;
 
