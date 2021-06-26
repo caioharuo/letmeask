@@ -5,9 +5,9 @@ Designed to simplify how viewers ask questions and how creators can view and ans
 <h2>Layout 🔖</h2>
 <p>You can check the Layout right here: https://www.figma.com/file/u0BQK8rCf2KgzcukdRRCWh/Letmeask?node-id=0%3A1</p>
 
-<h3> Now with dark and light theme! </h3>
+<h3> Now with responsive dark and light theme! </h3>
 
-<img src="https://i.imgur.com/z1djVlA.png" />
+<img src="https://i.imgur.com/duN9gkI.png" />
 
 <h2>Tools 🛠️</h2>
 
