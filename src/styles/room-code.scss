@@ -1,4 +1,21 @@
 .room-code {
+  &.dark {
+    background: linear-gradient(
+      90deg,
+      rgba(78, 91, 255, 1) 16%,
+      rgba(134, 90, 253, 1) 48%,
+      rgba(235, 89, 249, 1) 100%
+    );
+    background-repeat: no-repeat;
+    border-color: transparent;
+
+    color: #f8f8f8;
+
+    > div {
+      background: transparent;
+    }
+  }
+
   height: 40px;
   border-radius: 8px;
   overflow: hidden;

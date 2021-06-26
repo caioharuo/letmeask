@@ -61,6 +61,10 @@
       margin-top: 16px;
       color: #f8f8f8;
     }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   main {
@@ -128,6 +132,7 @@
     font-weight: 500;
     background-color: #ea4335;
     color: #fff;
+    padding: 8px;
 
     display: flex;
     justify-content: center;
