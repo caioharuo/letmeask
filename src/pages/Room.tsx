@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { database } from "../services/firebase";
 
 import { useAuth } from "../hooks/useAuth";
@@ -23,7 +23,8 @@ type RoomParams = {
 };
 
 export function Room() {
-  const { user } = useAuth();
+  const history = useHistory();
+  const { user, signInWithGoogle, logout } = useAuth();
   const { theme } = useTheme();
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState("");
@@ -72,6 +73,13 @@ export function Room() {
     }
   }
 
+  async function handleLogout() {
+    if (user) {
+      await logout();
+    }
+    history.push("/");
+  }
+
   return (
     <div id="page-room" className={theme}>
       <Toaster />
@@ -84,7 +92,22 @@ export function Room() {
               alt="Letmeask"
             />
           </Link>
-          <RoomCode code={roomId} />
+          <div>
+            <RoomCode code={roomId} />
+            <button className="logout">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="30px"
+                viewBox="0 0 24 24"
+                width="30px"
+                fill="#000000"
+                onClick={handleLogout}
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+              </svg>
+            </button>
+          </div>
         </div>
         <ButtonToggleTheme />
       </header>
@@ -100,6 +123,7 @@ export function Room() {
             placeholder="O que você quer perguntar?"
             onChange={(event) => setNewQuestion(event.target.value)}
             value={newQuestion}
+            disabled={!user}
           />
 
           <div className="form-footer">
@@ -110,7 +134,8 @@ export function Room() {
               </div>
             ) : (
               <span>
-                Para enviar uma pergunta, <button>faça seu login</button>.
+                Para enviar uma pergunta,{" "}
+                <button onClick={signInWithGoogle}>faça seu login</button>.
               </span>
             )}
             <Button type="submit" disabled={!user}>

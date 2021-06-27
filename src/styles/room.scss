@@ -8,14 +8,18 @@
 
     header {
       border-color: #835afd;
+
+      .content svg {
+        fill: #f8f8f8;
+      }
     }
 
     .room-title h1 {
       color: #f8f8f8;
     }
 
-    .user-info span {
-      color: #f8f8f8 !important;
+    main form .form-footer .user-info > span {
+      color: #f8f8f8;
     }
   }
 
@@ -40,10 +44,38 @@
 
         button {
           height: 40px;
+
+          &:last-child:hover {
+            filter: brightness(0.8);
+          }
+        }
+
+        @media screen and (max-width: 568px) {
+          flex-direction: column;
         }
       }
 
-      @media screen and (max-width: 568px) {
+      .logout {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        svg {
+          transition: fill 0.2s;
+        }
+
+        svg:hover {
+          fill: #f44336;
+        }
+
+        @media screen and (max-width: 768px) {
+          position: absolute;
+          top: 24px;
+          left: 24px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
         flex-direction: column;
         gap: 16px;
       }
@@ -77,6 +109,14 @@
         color: #fff;
         font-weight: 500;
         font-size: 14;
+
+        @media screen and (max-width: 568px) {
+          padding: 8px;
+        }
+      }
+
+      @media screen and (max-width: 568px) {
+        justify-content: space-between;
       }
     }
 
@@ -90,6 +130,10 @@
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
         resize: vertical;
         min-height: 130px;
+
+        &:disabled {
+          cursor: not-allowed;
+        }
       }
 
       .form-footer {
